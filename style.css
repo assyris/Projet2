@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+
+#bloc_page
+{
+    width: 1338px;
+    margin: 50px auto; 
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+#en-tête
+{
+    display: flex;
+}
+
+nav
+{
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 250px;
+}
+
+nav ul
+{
+    list-style-type: none;
+ 	display: flex;
+}
+
+nav li
+{
+    margin-right: 70px;
+}
+
+nav a
+{
+    color: #000000;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+nav a:hover
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
