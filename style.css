@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 #bloc_page
 {
     width: 1338px;
     margin: 50px auto; 
     font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
     
 }
+
+
 
 #en-tête
 {
@@ -44,3 +48,40 @@ nav a:hover
     color: #0065FC;
     border-top: 2px solid #0065FC;
 }
+#inscrire
+{
+    color: #0065FC;
+}
+
+h1
+{
+    font-style: bold;
+}
+
+#formulaire
+{
+    display: flex;
+}
+#location
+{
+    background-color: #F2F2F2;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px 0px 0px 10px;
+}
+#ville
+{
+    border-color: #F2F2F2;
+    width: 235px;
+    height: 50px;
+}
+#rechercher
+{
+    background-color: #0065FC;
+    width: 135px;
+    height: 50px;
+    border-radius: 0px 10px 10px 0px;
+    text-decoration: none;
+    color: white;
+}
+
