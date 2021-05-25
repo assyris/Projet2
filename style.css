@@ -1,87 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-#bloc_page
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+body 
 {
-    width: 1338px;
-    margin: 50px auto; 
-    font-family: 'Raleway', sans-serif;
-    font-size: 1em;
-    font-family: 'Raleway', sans-serif;
-    
+    font-family: "Raleway", "Sans serif";
+    margin: 0;
 }
-
-
-
-#en-tête
+.header 
+{
+    display: grid;
+    align-items: center;
+    max-width: 1340px;
+    margin: auto;
+}
+.headerImg 
+{
+    grid-area: logo;
+}
+.headerNav 
 {
     display: flex;
+    align-items: center;
+    grid-area: navbar;
+    ;
 }
-
-nav
+.headerNavLink 
 {
-    float: right;
-    position: absolute;
-    top: 50px;
-    right: 250px;
+    padding: 35px;
+    font-weight: 500;
+    text-align: center;
 }
-
-nav ul
-{
-    list-style-type: none;
- 	display: flex;
-}
-
-nav li
-{
-    margin-right: 70px;
-}
-
-nav a
-{
-    color: #000000;
-    text-decoration: none;
-    margin-top: 50px;
-}
-
-nav a:hover
-{
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
-}
-#inscrire
+.headerNavLink[data-active=true]
 {
     color: #0065FC;
 }
-
-h1
+.headerNavLink:hover 
 {
-    font-style: bold;
+    color: #0065FC;
 }
-
-#formulaire
+#signup
 {
     display: flex;
+    align-items: center;
+    color: #0065FC;
+    font-weight: 600;
+    padding-left: 35px;
 }
-#location
+a
 {
-    background-color: #F2F2F2;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px 0px 0px 10px;
-}
-#ville
-{
-    border-color: #F2F2F2;
-    width: 235px;
-    height: 50px;
-}
-#rechercher
-{
-    background-color: #0065FC;
-    width: 135px;
-    height: 50px;
-    border-radius: 0px 10px 10px 0px;
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
-
