@@ -1,46 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
-
-#bloc_page
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+body 
 {
-    width: 1338px;
-    margin: 50px auto; 
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", "Sans serif";
+    margin: 0;
+    font-size: 16px;
+}
+.header 
+{
+    display: grid;
+    align-items: center;
+    width: 1340px;
+    margin: auto;
+}
+.headerImg 
+{
+    grid-area: logo;
+    padding: 0 2rem;
+    height: 2.8rem;
+}
+.headerNav 
+{
+    display: flex;
+    align-items: center;
+    grid-area: navbar;
+}
+.headerNavLink 
+{
+    padding: 2.18rem;
+    font-weight: 500;
+    text-align: center;
+}
+.headerNavLink[data-active=true]
+{
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+}
+.headerNavLink:hover 
+{
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+}
+.headersignup
+{
+    align-items: center;
+    padding: 2.18rem;
+    color: #0065FC;
+    font-weight: 600;
+    grid-area: button;
+}
+a
+{
+    text-decoration: none;
+    color: inherit;
+} 
+@media screen and (min-width: 1025px)
+{
+    .header
+    {
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo . navbar button";
+    }
+    .headerNavLink[data-active=true]
+    {
+        border-top: 3px solid #0065FC;
+    }
+    .headerNavLink:hover 
+    {
+        border-top: 3px solid #0065FC;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    .headerImg
+    {
+        height: 5.6rem;
+    }
+    .header
+    {
+        font-size: 2rem;
+        max-width: auto;
+        margin: 0;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo . button" "navbar navbar navbar";
+    }
+    .headerNavLink
+    {
+        border-bottom: 3px solid #F2F2F2;
+        width: 50%;
+
+    }
+    .headerNavLink[data-active=true]
+    {
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+    }
+    .headerNavLink:hover 
+    {
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+    }
+    .headersignup
+    {
+        margin-right: 1rem;
+    }
     
 }
 
-#en-tête
-{
-    display: flex;
-}
-
-nav
-{
-    float: right;
-    position: absolute;
-    top: 50px;
-    right: 250px;
-}
-
-nav ul
-{
-    list-style-type: none;
- 	display: flex;
-}
-
-nav li
-{
-    margin-right: 70px;
-}
-
-nav a
-{
-    color: #000000;
-    text-decoration: none;
-    margin-top: 50px;
-}
-
-nav a:hover
-{
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
-}

@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
         <meta charset="utf-8" />
 	    <link rel="stylesheet" href="style.css">
 	    <link rel="stylesheet" media="screen and (max-width: 1024px)" href="petite_resolution.css">
 	    <script src="https://kit.fontawesome.com/0f91d2e83a.js" crossorigin="anonymous"></script>
-
-	    <title>Reservia</title>
+        <title>Reservia</title>
     </head>
+
     <body>
-        <header>
-            <div id="en-tête">
-                <div>
-                    <img src="images/logo/Reservia@3x.png" alt="logo_reservia"/>
-                </div>
-    
-                <nav>
-                    <ul>
-                        <li><a href="#">Hebergements</a></li>
-                        <li><a href="#">Activités</a></li>
-                        <li><a href="#">S'Inscrire</a></li>
-                    </ul>
-                </nav>	
-            </div>	
-    
+
+        <header class="header">
+                <img src="images/logo/Reservia.svg" alt="logo_reservia" class="headerImg" />
+                <nav class="headerNav">
+                    <a href="#" class="headerNavLink" data-active="true">Hebergements</a>
+                    <a href="#" class="headerNavLink" data-active="false">Activités</a>
+                </nav>
+                <a href="#" class="headersignup"><strong>S'Inscrire</strong></a>
+                
+        </header>
+
+    <main>	
+            <div id="titre_principal">
                 <h1>Trouver votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-    
+            </div>
+
                 <form method="post" action="" id="formulaire">
-                    <p><i class="fas fa-map-marker-alt"></i><input type="text" name="ville" placeholder="Marseille,Fance" ><a href="#" class="rechercher">rechercher</p>
+                    <i class="fas fa-map-marker-alt" id="location"></i>
+                    <input type="search" name="ville" placeholder="Marseille,Fance" size="1" id="ville" >
+                    <button class="bouton">
+                        <div class="bouton_texte">Rechercher</div>
+                      </button>
                 </form>
     
             <div>
                 <h2>Filtres</h2>
-                <p><i class="fas fa-dollar-sign"></i>Economique<i class="fas fa-child"></i>Familial<i class="fas fa-heart"></i>Romantique<i class="fas fa-dog"></i>Animaux autorisés</p>
+                <i class="fas fa-dollar-sign"></i>Economique<i class="fas fa-child"></i>Familial<i class="fas fa-heart"></i>Romantique<i class="fas fa-dog"></i>Animaux autorisés
             </div>
     
-            <p><i class="fas fa-info-circle"></i>Plus de 500 logement sont disponible dans cette ville</p>
-    
-        </header>
+            <i class="fas fa-info-circle"></i>Plus de 500 logement sont disponible dans cette ville
+        
         <section>
             <article id="Hébergements">
                 <h1>Hébergement à Marseille</h1>
@@ -164,6 +167,8 @@
                 <div class="unique"><img src="images/activites/4_small/.jpg" /><p>Parc Longchamp</p></div>
             </article>
         </section>
+    </main>
+    
         <footer>
             <div>
                 <h1>A propos</h1>
