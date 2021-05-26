@@ -9,10 +9,8 @@ body
 {
     display: grid;
     align-items: center;
-    min-width: 601px;
+    width: 1340px;
     margin: auto;
-    grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: "logo . navbar button";
 }
 .headerImg 
 {
@@ -55,7 +53,7 @@ a
     text-decoration: none;
     color: inherit;
 } 
-/* @media screen and (min-width: 601px)
+@media screen and (min-width: 1025px)
 {
     .header
     {
@@ -71,27 +69,40 @@ a
         border-top: 3px solid #0065FC;
     }
 }
-     */
-@media screen and (max-width: 600px)
+@media screen and (max-width: 1024px)
 {
+    .headerImg
+    {
+        height: 5.6rem;
+    }
     .header
     {
-        grid-template-columns: auto auto;
-        grid-template-areas: "logo button" "navbar navbar";
+        font-size: 2rem;
+        max-width: auto;
+        margin: 0;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo . button" "navbar navbar navbar";
     }
     .headerNavLink
     {
-        border-top: none;
         border-bottom: 3px solid #F2F2F2;
+        width: 50%;
 
     }
     .headerNavLink[data-active=true]
     {
+        border-top: none;
         border-bottom: 3px solid #0065FC;
     }
     .headerNavLink:hover 
     {
+        border-top: none;
         border-bottom: 3px solid #0065FC;
+    }
+    .headersignup
+    {
+        margin-right: 1rem;
     }
     
 }
+
