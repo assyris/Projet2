@@ -22,26 +22,56 @@
         </header>
 
     <main>	
-            <div id="titre_principal">
+        <section class="search">
+
+            <div class="searchTitle">
                 <h1>Trouver votre hébergement pour des vacances de rêve</h1>
-                <p>En plein centre ville ou en pleine nature</p>
+                <p class="subtitle">En plein centre ville ou en pleine nature</p>
             </div>
 
-                <form method="post" action="" id="formulaire">
-                    <i class="fas fa-map-marker-alt" id="location"></i>
-                    <input type="search" name="ville" placeholder="Marseille,Fance" size="1" id="ville" >
-                    <button class="bouton">
-                        <div class="bouton_texte">Rechercher</div>
-                      </button>
-                </form>
-    
-            <div>
+            <form method="post" action="#" class="form">
+                <div class="iconLocation">
+                    <i class="fas fa-map-marker-alt" ></i>
+                </div>
+                <input type="search" name="ville" placeholder="Marseille,Fance" size="1" class="searchTown" >
+                <button class="searchButton">
+                    <span class="textButton">Rechercher</span>
+                </button>
+            </form>
+
+            <div class="subtitleFilter">
                 <h2>Filtres</h2>
-                <i class="fas fa-dollar-sign"></i>Economique<i class="fas fa-child"></i>Familial<i class="fas fa-heart"></i>Romantique<i class="fas fa-dog"></i>Animaux autorisés
+            </div>
+
+            <div class="searchFilter">
+                <div class="filter">
+                    <div class="iconFilter">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <span class="textFilter">Economique</span>
+                </div>
+                <div class="filter">
+                    <div class="iconFilter">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <span class="textFilter">Familial</span>
+                </div>
+                <div class="filter">
+                    <div class="iconFilter">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="textFilter">Romantique</span>
+                </div>
+                <div class="filter">
+                    <div class="iconFilter">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <span class="textFilter">Animaux autorisés</span>
+                </div>
             </div>
     
             <i class="fas fa-info-circle"></i>Plus de 500 logement sont disponible dans cette ville
-        
+        </section>
         <section>
             <article id="Hébergements">
                 <h1>Hébergement à Marseille</h1>
