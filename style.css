@@ -123,7 +123,7 @@ h1
 .iconLocation
 {
     background-color:#F2F2F2;
-    border-radius: 10px 0 0 10px;
+    border-radius: 1rem 0 0 1rem;
     text-align: center;
     padding: 1rem 1.25rem;
 }
@@ -135,25 +135,101 @@ h1
     border-bottom: 1px #F2F2F2 solid;
     width: 14rem;
     font-weight: bold;
+    font-size: 1rem;
+    padding-left: 0.5rem;
 }
 .searchTown::placeholder 
 {
     font-family: "Raleway", "Sans serif";
     font-size: 1rem;
     color: black;
+    padding-left: 0.5rem;
 }    
 .searchButton
 {
     font-weight: bold;
     color: white;
     background-color: #0065FC;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 1rem 1rem 0;
     border: none;
     font-family: "Raleway", "Sans serif";
     width: 7rem;
     cursor: pointer;
 }
+#loupe
+{
+    display: none;
+}
 h2
 {
     font-size: 1rem;
+}
+.searchFilter
+{
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    
+}
+.subtitleFilter
+{
+    margin: 0 2rem 1rem 0;
+    display: flex;
+    align-items: center;
+}
+.filter 
+{
+    display: flex;
+    text-align: center;
+    border: 2px solid #F2F2F2;
+    border-radius: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: bold;
+}
+.filter:hover
+{
+    background-color: #f3f8ff;
+    transform: scale(1.2);
+}
+.iconFilter
+{
+    color: #0065FC;
+    padding: 0.8rem;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textFilter
+{
+    color: black;
+    padding: 1rem;
+}
+.info
+{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.infoIcon
+{
+    color: #0065FC;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #F2F2F2;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+}
+.textInfo
+{
+    padding: 0.2rem 0 0 0.8rem;
 }
