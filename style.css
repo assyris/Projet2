@@ -4,14 +4,13 @@ body
     font-family: "Raleway", "Sans serif";
     margin: 0;
     font-size: 16px;
-    width: 1340px;
-    margin: auto;
 }
 .header 
 {
     display: grid;
     align-items: center;
-    
+    max-width: 1340px;
+    margin: auto;   
 }
 .headerImg 
 {
@@ -57,6 +56,7 @@ a
 {
     .header
     {
+        max-width: auto;
         grid-template-columns: auto 1fr auto auto;
         grid-template-areas: "logo . navbar button";
     }
@@ -102,15 +102,29 @@ a
     }
     .headersignup
     {
-        margin-right: 1rem;
+        margin-right: 2rem;
     }
-    
-}
-.main
+}    
+@media screen and (max-width: 600px)  
 {
-    display: flex;
+    .header
+    {
+        font-size: 4rem;
+        max-width: auto;
+    }
+    .headersignup
+    {
+        margin-right: 2rem;
+    }
+}  
+
+.search 
+{
+    max-width: 1340px;
+    margin: auto;
+    box-sizing: border-box;
 }
-h1
+.searchTitle h1
 {
     font-size: 1.3rem;
 }
@@ -137,6 +151,7 @@ h1
     font-weight: bold;
     font-size: 1rem;
     padding-left: 0.5rem;
+    font-family: "Raleway", "Sans serif";
 }
 .searchTown::placeholder 
 {
@@ -156,10 +171,6 @@ h1
     width: 7rem;
     cursor: pointer;
 }
-#loupe
-{
-    display: none;
-}
 h2
 {
     font-size: 1rem;
@@ -167,9 +178,8 @@ h2
 .searchFilter
 {
     display: flex;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    
+    margin-top: 2rem;  
+    flex-wrap: wrap; 
 }
 .subtitleFilter
 {
@@ -181,12 +191,11 @@ h2
 {
     display: flex;
     text-align: center;
-    border: 2px solid #F2F2F2;
+    border: 3px solid #F2F2F2;
     border-radius: 2rem;
     margin-right: 2rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    transition-duration: 0.1s;
     font-weight: bold;
 }
 .filter:hover
@@ -232,4 +241,50 @@ h2
 .textInfo
 {
     padding: 0.2rem 0 0 0.8rem;
+}
+@media screen and (min-width: 1025px)
+{
+    #loupe
+    {
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 1024px)
+{
+    .search 
+    {
+        max-width: auto;
+        margin: 0 2rem 0 2rem;
+        font-size: 2rem;
+    }
+    .iconFilter
+    {
+        height: 3rem;
+        width: 3rem;
+    }
+    .searchTitle h1
+    {
+        font-size: 2rem;
+    }
+    .form
+    {
+        width: 100%;
+    }
+    .searchTown
+    {
+        flex: 1;
+    }
+    .textButton
+    {
+        display: none;
+    }
+    .loupe 
+    {
+        display: block;
+    }
+    .filter
+    {
+     
+    }
 }
