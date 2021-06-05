@@ -8,7 +8,7 @@ body
 main
 {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: auto;
 }
 a
 {
@@ -207,8 +207,7 @@ h2
     width: 225px;
     height: 190px;
     padding: 0.2rem;
-    margin-bottom: 2rem;
-    margin-right: 1rem;
+    margin-bottom: 1rem;
     box-shadow: 0px 0px 20px grey;
     transition-duration: 0.1s;
 }
@@ -233,12 +232,7 @@ h2
 {
     padding-left: 1rem;
 }
-.heber-title
-{
-    position: relative;
-    bottom: 1rem;
-}
-.heber-title p
+.heber-title, .heber-title p
 {
     position: relative;
     bottom: 1rem;
@@ -246,21 +240,32 @@ h2
 .popular
 {
     background-color: #F2F2F2;
-    width: 32%;
+    width: 375px;
     border-radius: 1rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    margin-right: 2rem;
+}
+.popular-title
+{
+    
+    width: 375px;
+    margin: 0 auto;
+}
+.popular-icon
+{
+    float: right;
+    position: relative;
+    bottom: 38px; 
 }
 .popular-card
 {
     background-color: white;
     border-radius: 1rem;
-    width: 400px;
+    width: 375px;
     height: 150px;
     padding: 0.2rem;
-    margin-bottom: 2rem;
-    margin-right: 1rem;
     box-shadow: 0px 0px 10px grey;
     display: flex;
     margin: 1rem auto;
@@ -304,6 +309,50 @@ h2
     .search-filter, .info
     {
         margin-left: 2rem;
+    }
+}
+@media screen and (max-width: 1349px)
+{
+    .popular
+    {
+        order: 1;
+        width: 100%;
+        border-radius: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+        padding: 2rem 1rem;
+    }
+    .popular-title
+    {
+        width: 100%;
+        margin: 0 1rem;
+    }
+    .popular-card
+    {
+        width: 30%;
+    }
+    .hebergements
+    {
+        order: 2;
+        background-color: white;
+        width: 100%;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    .hebergements h3, h2
+    {
+        margin: 1rem;
+    }
+    .heber-card
+    {
+        width: 28%;
+        height: 210px;
+        margin: 1rem;
+    }
+    .heber-img
+    {
+        height: 120px;
     }
 }
 @media screen and (max-width: 1024px)
@@ -372,7 +421,19 @@ h2
     {
         margin-right: 0.5rem;
     }
-    .subtitle-filter
+    .hebergements h3, h2
+    {
+        margin: 1rem 0;
+    }
+    .popular-title
+    {
+        margin: auto 0;
+    }
+    .heber-card
+    {
+        margin: 1rem 0;
+    }
+    .subtitle-filter, .popular-card, .heber-card
     {
         width: 100%;
     }
