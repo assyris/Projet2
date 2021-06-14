@@ -169,7 +169,6 @@ h2
 {
     color: #0065FC;
     align-items: center;
-    justify-content: center;
     border: 1px solid #F2F2F2;
     border-radius: 100%;
     height: 2rem;
@@ -203,12 +202,13 @@ h2
 {
     background-color: white;
     border-radius: 1rem;
-    width: 225px;
+    width: 245px;
     height: 190px;
     padding: 0.2rem;
     margin-bottom: 1rem;
     box-shadow: 0px 0px 20px grey;
     transition-duration: 0.1s;
+    cursor: pointer;
 }
 .heber-card:hover, .popular-card:hover
 {
@@ -269,10 +269,17 @@ h2
     display: flex;
     margin: 1rem auto;
     transition-duration: 0.1s;
+    cursor: pointer;
 }
 .popular-subtilte
 {
     padding-left: 1rem;
+    justify-content: start;
+}
+.popular-subtilte p
+{
+    position: relative;
+    bottom: 1rem;
 }
 .popular-img 
 {
@@ -284,41 +291,64 @@ h2
 .popular-star
 {
     color: #0065FC;
+    padding-left: 1rem;
+}
+.popular-star:nth-child(1)
+{
+    position: relative;
+    top: 1rem;
+}
+.popular-star:nth-child(3)
+{
+    position: relative;
+    top: 1rem;
+}
+.popular-contenu
+{
+    flex-direction: column;
+}
+.star[data-active=false]
+{
+    color: #F2F2F2;
 }
 .activités
 {
-    margin: 3rem 2rem 2rem;
+    max-width: 1440px;
+    margin: 3rem 2rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .activités h3
 {
     width: 100%;
 }
-.card-tall
+.card-tall 
 {
-    width: 319px;
-    height: 560px;
+    width: 22%;
+    height: 500px;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px grey;
-    margin-right: 2rem;
+    margin-bottom: 2rem;
 }
 .card-tall img
 {
     width: 100%;
-    height: 500px;
+    height: 440px;
     border-radius: 1rem 1rem 0 0;
     object-fit: cover;
 }
 .card-tall h4
 {
     padding-left: 1rem;
+    position: relative;
+    bottom: 7px;
 }
 .card-small
 {
-    width: 319px;
-    height: 264px;
+    width: 100%;
+    height: 234px;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px grey;
@@ -327,39 +357,45 @@ h2
 .card-small img
 {
     width: 100%;
-    height: 204px;
+    height: 174px;
     border-radius: 1rem 1rem 0 0;
     object-fit: cover;
 }
 .card-small h4
 {
     padding-left: 1rem;
+    position: relative;
+    bottom: 7px;
 }
-.card-column1
+.card-column
 {
+    width: 22%;
     display: flex;
-    flex-direction: column;
-    margin-right: 2rem;
-}
-.card-column2
-{
-    display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
 }
 .footer
 {
-    background-color: #F2F2F2;
-    display: flex;
-    justify-content: space-around;
-    height: 200px;
+    background-color: #F2F2F2; 
 }
-.footer ul
+.bande-footer
 {
-    list-style-type: none;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
 }
 .liste-footer
 {
     padding-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 15%;
+}
+.liste-footer li
+{
+    padding-bottom: 1rem;
+    list-style: none;
 }
 @media screen and (min-width: 1025px)
 {
@@ -429,6 +465,10 @@ h2
     {
         height: 120px;
     }
+    .liste-footer
+    {
+        margin-right: 10%;
+    }
 }
 @media screen and (max-width: 1024px)
 {
@@ -495,6 +535,7 @@ h2
     .filter
     {
         margin-right: 0.5rem;
+        margin-bottom: 1rem;
     }
     .hebergements h3, h2
     {
@@ -511,5 +552,36 @@ h2
     .subtitle-filter, .popular-card, .heber-card
     {
         width: 100%;
+    }
+    .activités
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem 1rem;
+    }
+    .card-tall, .card-small
+    {
+        width: 100%;
+        height: 190px;
+    }
+    .card-column
+    {
+        width: 100%;
+        height: 444px;
+    }
+
+    .card-tall img, .card-small img
+    {
+        height: 70%;
+    }
+    .footer
+    {
+        height: 600px;
+    }
+    .liste-footer
+    {
+        width: 100%;
+        margin-left: 1rem;
     }
 }
