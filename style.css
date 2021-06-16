@@ -3,6 +3,7 @@ body
 {
     font-family: "Raleway", "Sans serif";
     font-size: 16px;
+    margin: 0;
 }
 main
 {
@@ -209,10 +210,6 @@ h2
     box-shadow: 0px 0px 20px grey;
     transition-duration: 0.1s;
     cursor: pointer;
-}
-.heber-card:hover, .popular-card:hover
-{
-    transform: scale(1.1);
 }
 .heber-img 
 {
@@ -421,6 +418,13 @@ h2
         margin-left: 2rem;
     }
 }
+@media screen and (min-width: 1349px)
+{
+    .heber-card:hover, .popular-card:hover, .card-tall:hover, .card-small:hover
+    {
+        transform: scale(1.05);
+    }
+}    
 @media screen and (max-width: 1349px)
 {
     .popular
