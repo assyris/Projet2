@@ -2,8 +2,13 @@
 body 
 {
     font-family: "Raleway", "Sans serif";
-    margin: 0;
     font-size: 16px;
+    margin: 0;
+}
+main
+{
+    max-width: 1440px;
+    margin: auto;
 }
 main
 {
@@ -170,9 +175,8 @@ h2
 {
     color: #0065FC;
     align-items: center;
-    justify-content: center;
     border: 1px solid #F2F2F2;
-    border-radius: 100%;
+    border-radius: 50%;
     height: 2rem;
     width: 2rem;
     display: flex;
@@ -188,12 +192,13 @@ h2
 .hebergements
 {
     background-color: #F2F2F2;
-    width: 59%;
+    width: 57%;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: 2rem;
 }
 .hebergements h3, h2
 {
@@ -203,23 +208,20 @@ h2
 {
     background-color: white;
     border-radius: 1rem;
-    width: 225px;
+    width: 245px;
     height: 190px;
     padding: 0.2rem;
-    margin-bottom: 2rem;
-    margin-right: 1rem;
-    box-shadow: 1px 1px 20px grey;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 20px grey;
     transition-duration: 0.1s;
-}
-.heber-card:hover
-{
-    transform: scale(1.1);
+    cursor: pointer;
 }
 .heber-img 
 {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
     height: 100px;
+    object-fit: cover;
 }
 .heber-star
 {
@@ -231,12 +233,7 @@ h2
 {
     padding-left: 1rem;
 }
-.heber-title
-{
-    position: relative;
-    bottom: 1rem;
-}
-.heber-title p
+.heber-title, .heber-title p
 {
     position: relative;
     bottom: 1rem;
@@ -244,9 +241,163 @@ h2
 .popular
 {
     background-color: #F2F2F2;
-    width: 30%;
+    width: 375px;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+.popular-title
+{
+    
+    width: 375px;
+    margin: 0 auto;
+}
+.popular-icon
+{
+    float: right;
+    position: relative;
+    bottom: 38px; 
+}
+.popular-card
+{
+    background-color: white;
+    border-radius: 1rem;
+    width: 375px;
+    height: 150px;
+    padding: 0.2rem;
+    box-shadow: 0px 0px 10px grey;
+    display: flex;
+    margin: 1rem auto;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+.popular-subtilte
+{
+    padding-left: 1rem;
+    justify-content: start;
+}
+.popular-subtilte p
+{
+    position: relative;
+    bottom: 1rem;
+}
+.popular-img 
+{
+    width: 125px;
+    border-radius: 1rem 0 0 1rem;
+    height: 100%;
+    object-fit: cover;
+}
+.popular-star
+{
+    color: #0065FC;
+    padding-left: 1rem;
+}
+.popular-star:nth-child(1)
+{
+    position: relative;
+    top: 1rem;
+}
+.popular-star:nth-child(3)
+{
+    position: relative;
+    top: 1rem;
+}
+.popular-contenu
+{
+    flex-direction: column;
+}
+.star[data-active=false]
+{
+    color: #F2F2F2;
+}
+.activités
+{
+    max-width: 1440px;
+    margin: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.activités h3
+{
+    width: 100%;
+}
+.card-tall 
+{
+    width: 22%;
+    height: 500px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px grey;
+    margin-bottom: 2rem;
+}
+.card-tall img
+{
+    width: 100%;
+    height: 440px;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+}
+.card-tall h4
+{
+    padding-left: 1rem;
+    position: relative;
+    bottom: 7px;
+}
+.card-small
+{
+    width: 100%;
+    height: 234px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px grey;
+    margin-bottom: 2rem;
+}
+.card-small img
+{
+    width: 100%;
+    height: 174px;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+}
+.card-small h4
+{
+    padding-left: 1rem;
+    position: relative;
+    bottom: 7px;
+}
+.card-column
+{
+    width: 22%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.footer
+{
+    background-color: #F2F2F2; 
+}
+.bande-footer
+{
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+}
+.liste-footer
+{
+    padding-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 15%;
+}
+.liste-footer li
+{
+    padding-bottom: 1rem;
+    list-style: none;
 }
 
 
@@ -254,7 +405,6 @@ h2
 {
     .header
     {
-        max-width: auto;
         grid-template-columns: auto 1fr auto auto;
         grid-template-areas: "logo . navbar button";
     }
@@ -275,6 +425,61 @@ h2
         margin-left: 2rem;
     }
 }
+@media screen and (min-width: 1349px)
+{
+    .heber-card:hover, .popular-card:hover, .card-tall:hover, .card-small:hover
+    {
+        transform: scale(1.05);
+    }
+}    
+@media screen and (max-width: 1349px)
+{
+    .popular
+    {
+        order: 1;
+        width: 100%;
+        border-radius: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+        padding: 2rem 1rem;
+    }
+    .popular-title
+    {
+        width: 100%;
+        margin: 0 1rem;
+    }
+    .popular-card
+    {
+        width: 30%;
+    }
+    .hebergements
+    {
+        order: 2;
+        background-color: white;
+        width: 100%;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    .hebergements h3, h2
+    {
+        margin: 1rem;
+    }
+    .heber-card
+    {
+        width: 28%;
+        height: 210px;
+        margin: 1rem;
+    }
+    .heber-img
+    {
+        height: 120px;
+    }
+    .liste-footer
+    {
+        margin-right: 10%;
+    }
+}
 @media screen and (max-width: 1024px)
 {
     .header-img
@@ -286,7 +491,6 @@ h2
     {
         padding-top: 2rem;
         font-size: 1rem;
-        max-width: auto;
         grid-template-columns: auto 1fr auto;
         grid-template-areas: "logo . button" "navbar navbar navbar";
     }
@@ -312,7 +516,6 @@ h2
     }   
     .search 
     {
-        max-width: auto;
         margin: auto;
         padding: 0 1rem;
     }
@@ -340,9 +543,53 @@ h2
     .filter
     {
         margin-right: 0.5rem;
+        margin-bottom: 1rem;
     }
-    .subtitle-filter
+    .hebergements h3, h2
+    {
+        margin: 1rem 0;
+    }
+    .popular-title
+    {
+        margin: auto 0;
+    }
+    .heber-card
+    {
+        margin: 1rem 0;
+    }
+    .subtitle-filter, .popular-card, .heber-card
     {
         width: 100%;
+    }
+    .activités
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem 1rem;
+    }
+    .card-tall, .card-small
+    {
+        width: 100%;
+        height: 190px;
+    }
+    .card-column
+    {
+        width: 100%;
+        height: 444px;
+    }
+
+    .card-tall img, .card-small img
+    {
+        height: 70%;
+    }
+    .footer
+    {
+        height: 600px;
+    }
+    .liste-footer
+    {
+        width: 100%;
+        margin-left: 1rem;
     }
 }
