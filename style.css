@@ -427,7 +427,8 @@ h2
 }
 @media screen and (min-width: 1349px)
 {
-    .heber-card:hover, .popular-card:hover, .card-tall:hover, .card-small:hover
+    .heber-card:hover, .popular-card:hover, .card-tall:hover, .card-small-1:hover,
+    .card-small-2:hover, .card-small-3:hover, .card-small-4:hover
     {
         transform: scale(1.05);
     }
